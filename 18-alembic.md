@@ -3,13 +3,13 @@ We know that sqlalchemy has a limitation when it comes to building tables and th
 * **Alembic** is a lightweight database migration tool for usage with the SQLAlchemy Database Toolkit for Python.
 * A **database migration tool** allows us to incrementally track changes to database schema and rollback changes to any point in time, just like we track changes in our code using _git_.
 
-## commands
+## Commands
 ```
 alembic --help 
 ```
 * Returns all the commands that you can use with alembic
 
-## Inititalisation
+## Initialisation
 * First, we install alembic using the pip command.
     ```
     pip install alembic
