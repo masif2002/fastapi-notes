@@ -1,7 +1,15 @@
 # Heroku 
 
 ## Setting up heroku
-You can set up heroku for deplying your app by following along the tutorial [here](https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true).
+You can set up heroku for deploying your app by following along the tutorial [here](https://devcenter.heroku.com/articles/getting-started-with-python?singlepage=true).
+- **requirements.txt** file must be present in the project directory for heroku to understand it is a python project. So that it choses the right _buildpack_
+> Note: Buildpacks are scripts that are run when your app is deployed. They are used to install dependencies for your app and configure your environment.
+- Procfile contains the command that needs to be executed to start the application
+- **Worker** dynos are typically used for background jobs and is always _up_ (running) which consumes the _free dyno hours_
+- Whereas, **web** dynos are used to interact with frontend aspect of your program. It consumes _free dyno hours_ only when it receives a HTTP traffic
+- Since, the project xlm-price-tracker is not a web application, we use worker, but not web
+- dynos are containers/instances
+- slug is like the container image for dynos
 
 ## Starting our application
 After setting up heroku following along the documentation, there are a few more steps that we need to follow before we can access our application.
